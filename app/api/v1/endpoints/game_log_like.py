@@ -98,7 +98,7 @@ async def get_game_log_like_list(
     return likes
 
 
-@router.patch("/update/{game_log_id}", status_code=status.HTTP_200_OK)
+@router.patch("/patch/{game_log_id}", status_code=status.HTTP_200_OK)
 async def update_game_log_like(
     game_log_id: int,
     current_user: User = Depends(get_current_user_in_db),
